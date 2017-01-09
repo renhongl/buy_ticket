@@ -1,5 +1,4 @@
 var request = require('request');
-var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
 var fs = require('fs');
 var from = 10;
@@ -52,7 +51,6 @@ function main() {
 
 function callback(error, response, body) {
     console.log('\n');
-    var $ = cheerio.load(body);
     var list = JSON.parse(iconv.decode(body, "gb2312")).TrainItemsList;
     var newList = parseList(list);
     showList(newList);
