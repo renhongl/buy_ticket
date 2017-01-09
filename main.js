@@ -5,7 +5,7 @@ var from = 10;
 var end = 16;
 
 var App = require('alidayu-node');
-var app = new App('23593290', 'b4858df65732eb9985f4c30052538697');
+var app = new App('App Key', 'App Secret');
 
 var url = 'http://trains.ctrip.com/TrainBooking/Ajax/SearchListHandler.ashx?Action=getSearchList';
 var postData = {
